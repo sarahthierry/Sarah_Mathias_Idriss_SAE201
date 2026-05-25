@@ -1,0 +1,301 @@
+/* --- VARIABLES DE COULEURS --- */
+
+:root {
+    --bg-beige-gradient: linear-gradient(180deg, #EBE8E0 0%, #E3DEC6 100%);
+    --bg-beige-solid: #EBE8E0;
+    --footer-green: #9DA88F;
+    --brown-accent: #94836C;
+    --brown-hover: #7D6E5A;
+    --text-color: #4A4A4A;
+    --placeholder-color: #BCB9B1;
+    --input-bg: #EAE8E0;
+}
+
+/* --- STYLES GENERAUX --- */
+body {
+    font-family: 'Inter', sans-serif;
+    color: var(--text-color);
+    background-color: #F8F7F4;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.min-vh-60 {
+    min-height: 65vh;
+}
+
+/* --- NAVBAR --- */
+.custom-navbar {
+    background: #EBE8E0;
+}
+.custom-navbar .navbar-brand {
+    font-size: 1.25rem;
+    color: var(--text-color);
+    letter-spacing: 1px;
+}
+.menu-links .nav-link {
+    color: var(--text-color);
+    font-weight: 500;
+}
+.btn-connect {
+    background-color: var(--brown-accent);
+    color: #FFF !important;
+    border-radius: 20px;
+    padding: 6px 24px;
+    font-size: 0.9rem;
+    transition: background 0.3s ease;
+}
+.btn-connect:hover {
+    background-color: var(--brown-hover);
+}
+
+/* --- HERO & ACCUEIL --- */
+.hero-section {
+    background: var(--bg-beige-gradient);
+    padding: 60px 0;
+    border-bottom: 2px solid #C4C0B5;
+}
+
+/* Placeholders de texte (les gros XXXXX) */
+.text-placeholder {
+    background-color: var(--placeholder-color);
+    color: transparent;
+    display: inline-block;
+    border-radius: 4px;
+    margin-bottom: 12px;
+    height: 32px;
+    width: 160px;
+}
+.text-placeholder.wide {
+    width: 280px;
+    height: 38px;
+}
+.placeholder-text-group h2, .placeholder-text-group h1 {
+    margin-bottom: 15px;
+}
+.text-placeholder-sm {
+    background-color: transparent;
+    color: var(--text-color);
+    border-radius: 3px;
+    height: auto;
+    margin-bottom: 8px;
+    max-width: 320px;
+}
+
+/* Bouton Stage */
+.btn-stage {
+    background-color: var(--brown-accent);
+    color: #FFF;
+    border-radius: 30px;
+    padding: 10px 12px 10px 25px;
+    width: 180px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background 0.3s;
+}
+.btn-stage:hover {
+    background-color: var(--brown-hover);
+    color: #FFF;
+}
+.arrow-circle {
+    background-color: #FFF;
+    color: var(--brown-accent);
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+/* --- FORMULAIRES (INSCRIPTION & CONNEXION) --- */
+.form-card {
+    background-color: #FAF9F5;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+}
+.connection-card {
+    width: 100%;
+    max-width: 500px;
+}
+.form-icon-placeholder {
+    width: 45px;
+    height: 45px;
+    background-color: var(--brown-accent);
+    border-radius: 50% 50% 40% 40%; /* Forme d'icône buste stylisée */
+}
+.form-title {
+    color: #333;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+.form-label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #555;
+    margin-bottom: 6px;
+}
+.form-control {
+    background-color: var(--input-bg);
+    border: 1px solid #D1CDBF;
+    border-radius: 6px;
+    color: #333;
+}
+.form-control::placeholder {
+    color: #A6A296;
+}
+.form-control:focus {
+    background-color: #FFF;
+    border-color: var(--brown-accent);
+    box-shadow: 0 0 0 0.25rem rgba(148, 131, 108, 0.25);
+}
+.btn-form-submit {
+    background-color: var(--brown-accent);
+    color: #FFF;
+    border-radius: 4px;
+    font-weight: 600;
+    text-transform: none;
+    padding: 10px;
+}
+.btn-form-submit:hover {
+    background-color: var(--brown-hover);
+    color: #FFF;
+}
+.text-brown {
+    color: var(--brown-accent);
+}
+.small-text-muted, .footer-form-link {
+    font-size: 0.85rem;
+}
+
+/* --- FOOTER VERT --- */
+.custom-footer {
+    background-color: var(--footer-green);
+    color: #FFF;
+    padding: 60px 0 20px 0;
+}
+.btn-footer-action {
+    background-color: #FFF;
+    color: var(--text-color);
+    border: 1px solid #CCC;
+    border-radius: 4px;
+    padding: 5px 15px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+.btn-footer-action:hover {
+    background-color: #ECEAE4;
+}
+
+/* --- CARTES GRISES (interactives) --- */
+.tile-link{
+    display:block;
+    text-decoration:none;
+}
+
+/* Image hero + tailles tuiles (accueil) */
+.accueil-hero-image{
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+    max-height: 320px;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+
+
+.interactive-tiles .col-12{
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+
+.interactive-tiles .tile-gray{
+    height: 52px;
+    min-height: 52px;
+    font-size: 1.05rem;
+}
+
+@media (max-width: 767.98px){
+    .accueil-hero-image{ height: 220px; }
+    .interactive-tiles .tile-gray{ height: 48px; min-height: 48px; }
+}
+
+.interactive-tiles .tile-gray{
+    position: relative;
+    z-index: 1;
+    background-color: var(--placeholder-color);
+    color: var(--text-color);
+    -webkit-text-fill-color: var(--text-color);
+    border-radius: 6px;
+    height: 32px;
+    width: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: box-shadow 0.25s ease, transform 0.25s ease;
+}
+.interactive-tiles .tile-gray:hover{
+    box-shadow: 0 8px 22px rgba(0,0,0,0.10);
+    transform: translateY(-2px);
+}
+
+/* Lignes de décoration de structure */
+.f-line {
+    background-color: #7A856D; /* Ligne verte sombre */
+    border-radius: 2px;
+}
+.f-line.short {
+    height: 8px;
+    width: 140px;
+    background-color: #333; /* La ligne noire supérieure */
+}
+.f-line.long {
+    height: 3px;
+    width: 90%;
+}
+.f-line.text-line {
+    height: 2px;
+    width: 80%;
+    margin-bottom: 12px;
+    background-color: #B2BCA5;
+}
+
+/* Cercles du footer */
+.footer-circle {
+    width: 20px;
+    height: 20px;
+    background-color: var(--brown-accent);
+    border-radius: 50%;
+    display: inline-block;
+}
+
+/* Logo de droite */
+.footer-logo {
+    font-size: 3rem;
+    font-weight: 400;
+    color: #FFF;
+    line-height: 1;
+}
+.footer-separator {
+    border-color: #B2BCA5;
+    opacity: 0.4;
+}
+
+/* Liens footer */
+.footer-legal-link{
+    color: #FFF;
+    text-decoration: none;
+}
+.footer-legal-link:hover{
+    color: var(--brown-accent);
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 3px;
+}
+
+
