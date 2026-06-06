@@ -1,0 +1,155 @@
+<?php
+// Page Soutenances (convertie de soutenances_stage.html)
+?>
+
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StageConnect - Soutenances</title>
+    <link rel="icon" type="image/png" href="logo.png">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="CSS SAE 201 203.css">
+
+    <style>
+        .table-actions-col {
+            width: 180px;
+        }
+
+        .alert-rounded {
+            border-radius: 16px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg py-3">
+        <div class="container">
+            <a class="navbar-brand" href="index.php">
+                StageConnect
+            </a>
+
+            <div class="ms-auto d-flex align-items-center gap-3">
+                <a href="index.php" class="nav-link">Accueil</a>
+                <a href="offre_de_stage.php" class="nav-link">Offres</a>
+                <a href="mes_candidatures.php" class="nav-link">Mes candidatures</a>
+                <a href="suivi_stage.php" class="nav-link">Suivi</a>
+                <a href="conseil_et_demande.php" class="nav-link">Conseils</a>
+                <a href="soutenances_stage.php" class="nav-link">Soutenances</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero-section" id="page-soutenances">
+        <div class="container">
+            <div class="d-flex flex-column flex-md-row align-items-md-center justify-content-between gap-3 mb-4">
+                <div>
+                    <span class="badge bg-primary px-3 py-2 mb-3">Soutenances</span>
+                    <h1 class="hero-title mb-2">Planning & notes</h1>
+                    <p class="hero-text mb-0">Vos soutenances de stage (via tables stage + soutenance).</p>
+                </div>
+            </div>
+
+            <div class="row g-4 mb-5">
+                <div class="col-lg-12">
+                    <div class="form-card">
+                        <div class="d-flex align-items-center justify-content-between gap-3 flex-wrap">
+                            <h2 class="section-title mb-0">Soutenances planifiées</h2>
+                            <a href="conseil_et_demande.php" class="btn btn-outline-primary">Demander un conseil</a>
+                        </div>
+
+                        <p class="text-muted mt-3 mb-4">
+                            Placeholder : affichage prévu des champs de <b>soutenance</b> (date_soutenance, heure, salle, notes...).
+                        </p>
+
+                        <div class="table-responsive">
+                            <table class="table align-middle" id="liste-soutenances">
+                                <thead>
+                                    <tr>
+                                        <th>Date</th>
+                                        <th>Heure</th>
+                                        <th>Salle</th>
+                                        <th>Notes</th>
+                                        <th class="table-actions-col">Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>2026-06-20</td>
+                                        <td>09:30</td>
+                                        <td>A-201</td>
+                                        <td>
+                                            <div class="d-flex flex-column">
+                                                <span class="text-muted">Oral : <b>14.5</b>/20</span>
+                                                <span class="text-muted">Rapport 1 : <b>15</b>/20</span>
+                                                <span class="text-muted">Rapport 2 : <b>13</b>/20</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <a href="#" class="btn btn-primary btn-sm w-100">Voir le détail</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>2026-07-02</td>
+                                        <td>14:00</td>
+                                        <td>B-305</td>
+                                        <td>
+                                            <span class="text-muted">Notes disponibles après soutenance</span>
+                                        </td>
+                                        <td>
+                                            <a href="#" class="btn btn-outline-primary btn-sm w-100">Préparer</a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="alert alert-info mt-4 mb-0 alert-rounded">
+                            Si aucune soutenance n’est planifiée : vous verrez un message d’absence (à implémenter en PHP).
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h4>StageConnect</h4>
+                    <p>Plateforme de gestion des stages pour étudiants et entreprises.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Navigation</h5>
+                    <a href="index.php" class="footer-link">Accueil</a>
+                    <a href="offre_de_stage.php" class="footer-link">Offres</a>
+                    <a href="mes_candidatures.php" class="footer-link">Mes candidatures</a>
+                    <a href="suivi_stage.php" class="footer-link">Suivi</a>
+                </div>
+                <div class="col-md-4">
+                    <h5>Informations</h5>
+                    <a href="#" class="footer-link">Mentions légales</a>
+                    <a href="#" class="footer-link">Politique de confidentialité</a>
+                    <a href="#" class="footer-link">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
+

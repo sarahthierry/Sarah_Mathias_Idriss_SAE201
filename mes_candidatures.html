@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StageConnect - Mes candidatures</title>
+    <link rel="icon" type="image/png" href="logo.png">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="CSS SAE 201 203.css">
+    <style>
+        /* Moved inline table header width to stylesheet to avoid inline styles */
+        .actions-col { width: 220px; }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg py-3">
+        <div class="container">
+            <a class="navbar-brand" href="index (1).html">
+                StageConnect
+            </a>
+
+            <div class="ms-auto d-flex align-items-center gap-3">
+                <a href="index (1).html" class="nav-link">Accueil</a>
+                <a href="offre_de_stage.html" class="nav-link">Offres</a>
+                <a href="mes_candidatures.html" class="nav-link">Mes candidatures</a>
+                <a href="suivi_stage.html" class="nav-link">Suivi</a>
+                <a href="conseil_et_demande.html" class="nav-link">Conseils</a>
+                <a href="soutenances_stage.html" class="nav-link">Soutenances</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero-section" id="page-candidatures">
+        <div class="container">
+            <div class="d-flex flex-column flex-md-row align-items-md-center justify-content-between gap-3 mb-4">
+                <div>
+                    <span class="badge bg-primary px-3 py-2 mb-3">Mes candidatures</span>
+                    <h1 class="hero-title mb-2">Suivi de vos candidatures</h1>
+                    <p class="hero-text mb-0">Liste des offres auxquelles vous avez postulé.</p>
+                </div>
+            </div>
+
+            <div class="row g-4 mb-5">
+                <div class="col-lg-12">
+                    <div class="form-card">
+                        <div class="d-flex align-items-center justify-content-between gap-3 flex-wrap">
+<h2 class="section-title mb-0">Candidatures (table postuler)</h2>
+                            <a href="offre_de_stage.html" class="btn btn-outline-primary">
+                                Ajouter une candidature
+                            </a>
+                        </div>
+
+                        <p class="text-muted mt-3 mb-4">
+                            Placeholder en HTML. Via PHP, on affichera :
+                            <b>offre_stage</b> + <b>entreprise</b> + date_postulation.
+                        </p>
+
+                        <div class="table-responsive">
+                            <table class="table align-middle">
+                                <thead>
+                                    <tr>
+                                        <th>Entreprise</th>
+                                        <th>Offre</th>
+                                        <th>Date</th>
+                                        <th>Statut</th>
+                                        <th class="actions-col">Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="liste-candidatures">
+                                    <tr>
+                                        <td>TechNova</td>
+                                        <td>Développeur Web Full Stack</td>
+                                        <td>2026-03-10</td>
+                                        <td><span class="badge bg-secondary">En attente</span></td>
+                                        <td>
+                                            <div class="d-flex gap-2">
+                                                <a href="#" class="btn btn-outline-primary btn-sm">Voir l’offre</a>
+                                                <button class="btn btn-primary btn-sm" type="button">Détails</button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>DataVision</td>
+                                        <td>Analyste de Données</td>
+                                        <td>2026-04-02</td>
+                                        <td><span class="badge bg-secondary">En attente</span></td>
+                                        <td>
+                                            <div class="d-flex gap-2">
+                                                <a href="#" class="btn btn-outline-primary btn-sm">Voir l’offre</a>
+                                                <button class="btn btn-primary btn-sm" type="button">Détails</button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>NetSecure</td>
+                                        <td>Administrateur Réseau</td>
+                                        <td>2026-05-15</td>
+                                        <td><span class="badge bg-success">Acceptée</span></td>
+                                        <td>
+                                            <div class="d-flex gap-2">
+                                                <a href="#" class="btn btn-outline-primary btn-sm">Voir l’offre</a>
+                                                <a href="suivi_stage.html" class="btn btn-primary btn-sm">Suivi</a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h4>StageConnect</h4>
+                    <p>
+                        Plateforme de gestion des stages
+                        pour étudiants et entreprises.
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Navigation</h5>
+                    <a href="index (1).html" class="footer-link">Accueil</a>
+                    <a href="offre_de_stage.html" class="footer-link">Offres</a>
+                    <a href="mes_candidatures.html" class="footer-link">Mes candidatures</a>
+                    <a href="suivi_stage.html" class="footer-link">Suivi</a>
+                </div>
+                <div class="col-md-4">
+                    <h5>Informations</h5>
+                    <a href="#" class="footer-link">Mentions légales</a>
+                    <a href="#" class="footer-link">Politique de confidentialité</a>
+                    <a href="#" class="footer-link">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
+

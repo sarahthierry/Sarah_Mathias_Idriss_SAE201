@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StageConnect - Espace Étudiant</title>
+  <link rel="icon" type="image/png" href="logo.png">
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="CSS SAE 201 203.css">
+
+  <style>
+    .dashboard-card { background: white; border-radius: 20px; padding: 26px; box-shadow: 0 5px 15px rgba(0,0,0,.04); height: 100%; }
+    .dashboard-title { color: #7e6f6c; font-weight: 800; font-size: 1.2rem; }
+    .quick-link { text-decoration: none; }
+    .quick-link:hover { opacity: .95; }
+  </style>
+</head>
+
+<body>
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg py-3">
+    <div class="container">
+      <a class="navbar-brand" href="index (1).html">StageConnect</a>
+
+      <div class="ms-auto d-flex align-items-center gap-3">
+        <a href="index (1).html" class="nav-link">Accueil</a>
+        <a href="offre_de_stage.html" class="nav-link">Offres</a>
+        <a href="mes_candidatures.html" class="nav-link">Mes candidatures</a>
+        <a href="suivi_stage.html" class="nav-link">Suivi</a>
+        <a href="conseil_et_demande.html" class="nav-link">Conseils</a>
+        <a href="soutenances_stage.html" class="nav-link">Soutenance</a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="hero-section" id="page-etudiant-dashboard">
+    <div class="container">
+      <div class="d-flex flex-column flex-md-row align-items-md-center justify-content-between gap-3 mb-4">
+        <div>
+          <span class="badge bg-primary px-3 py-2 mb-3">Espace Étudiant</span>
+          <h1 class="hero-title mb-2">Bonjour 👋</h1>
+          <p class="hero-text mb-0">Ton tableau de bord pour postuler, suivre, recevoir des conseils et gérer les étapes du stage.</p>
+        </div>
+      </div>
+
+      <!-- STATS RAPIDES -->
+      <div class="row g-4 mb-5">
+        <div class="col-md-4">
+          <div class="stats-box">
+            <div class="stats-number" id="stat-candidatures">3</div>
+            <p> Candidatures</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="stats-box">
+            <div class="stats-number" id="stat-offres-consultees">8</div>
+            <p> Offres consultées</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="stats-box">
+            <div class="stats-number" id="stat-suivi">En cours</div>
+            <p> Suivi</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARTES / ACTIONS -->
+      <div class="row g-4">
+        <div class="col-lg-4">
+          <div class="dashboard-card">
+            <div class="dashboard-title mb-2">1) Trouver une offre</div>
+            <p class="text-muted mb-4">Consulte les offres et postule en quelques clics.</p>
+            <a href="offre_de_stage.html" class="btn btn-primary w-100">Voir les offres</a>
+          </div>
+        </div>
+
+        <div class="col-lg-4">
+          <div class="dashboard-card">
+            <div class="dashboard-title mb-2">2) Gérer tes candidatures</div>
+            <p class="text-muted mb-4">Suivi des statuts et accès aux détails.</p>
+            <a href="mes_candidatures.html" class="btn btn-outline-primary w-100">Mes candidatures</a>
+          </div>
+        </div>
+
+        <div class="col-lg-4">
+          <div class="dashboard-card">
+            <div class="dashboard-title mb-2">3) Prochaines étapes</div>
+            <p class="text-muted mb-4">Conseils, soutenances, et progression globale.</p>
+            <div class="d-grid gap-2">
+              <a href="conseil_et_demande.html" class="btn btn-outline-primary">Conseils</a>
+              <a href="soutenances_stage.html" class="btn btn-outline-primary">Soutenances</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row g-4 mt-1">
+        <div class="col-lg-8">
+          <div class="form-card">
+            <h2 class="section-title mb-2">Conventions & documents</h2>
+            <p class="text-muted mb-4">
+              Zone placeholder : affichage du statut des conventions et téléchargement.
+              À connecter en PHP avec : <b>stage.convention</b> + validation professeur.
+            </p>
+
+            <div class="row g-3">
+              <div class="col-md-6">
+                <div class="p-3 bg-light rounded-3">
+                  <div class="fw-semibold">Convention</div>
+                  <div class="text-muted small">Dernière mise à jour: —</div>
+                  <div class="mt-3 d-flex gap-2 flex-wrap">
+                    <a href="#" class="btn btn-outline-primary btn-sm">Télécharger</a>
+                    <button class="btn btn-primary btn-sm" type="button" data-bs-toggle="modal" data-bs-target="#modalSoumettreConvention">Soumettre</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <div class="p-3 bg-light rounded-3">
+                  <div class="fw-semibold">Statut professeur</div>
+                  <div class="text-muted small">—</div>
+                  <div class="mt-3">
+                    <span class="badge bg-secondary">En attente de validation</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="alert alert-info alert-rounded mt-4 mb-0">
+              Soumettre une convention = upload fichier + création/maj dans <b>stage.convention</b> (côté PHP).
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4">
+          <div class="form-card">
+            <h2 class="section-title mb-3">Actions rapides</h2>
+            <div class="d-grid gap-2">
+              <a href="suivi_stage.html" class="btn btn-primary">Voir le suivi</a>
+              <a href="offre_de_stage.html" class="btn btn-outline-primary">Postuler à une offre</a>
+              <a href="conseil_et_demande.html" class="btn btn-outline-primary">Demander un conseil</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- MODAL SOUMETTRE CONVENTION -->
+  <div class="modal fade" id="modalSoumettreConvention" tabindex="-1" aria-labelledby="modalSoumettreConventionLabel" aria-hidden="true">
+    <div class="modal-dialog modal-md modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalSoumettreConventionLabel">Soumettre une convention</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
+        </div>
+        <div class="modal-body">
+          <p class="text-muted mb-3">Placeholder. À connecter en PHP (upload et enregistrement).</p>
+
+          <form action="#" method="POST" enctype="multipart/form-data">
+            <div class="mb-3">
+              <label class="form-label" for="file-convention">Fichier PDF</label>
+              <input id="file-convention" name="convention" class="form-control" type="file" accept="application/pdf" required />
+            </div>
+            <div class="mb-3">
+              <label class="form-label" for="stage-sujet">Stage concerné</label>
+              <select id="stage-sujet" name="id_stage" class="form-select" required>
+                <option value="1">Stage Web Full Stack (id_stage=1)</option>
+                <option value="2">Stage Data Science (id_stage=2)</option>
+              </select>
+            </div>
+
+            <div class="modal-footer p-0 mt-2">
+              <button type="button" class="btn btn-outline-primary" data-bs-dismiss="modal">Annuler</button>
+              <button type="submit" class="btn btn-primary">Envoyer</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <h4>StageConnect</h4>
+          <p>Plateforme de gestion des stages pour étudiants et entreprises.</p>
+        </div>
+        <div class="col-md-4">
+          <h5>Navigation</h5>
+          <a href="index (1).html" class="footer-link">Accueil</a>
+          <a href="offre_de_stage.html" class="footer-link">Offres</a>
+          <a href="mes_candidatures.html" class="footer-link">Mes candidatures</a>
+          <a href="suivi_stage.html" class="footer-link">Suivi</a>
+        </div>
+        <div class="col-md-4">
+          <h5>Informations</h5>
+          <a href="#" class="footer-link">Mentions légales</a>
+          <a href="#" class="footer-link">Politique de confidentialité</a>
+          <a href="#" class="footer-link">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
+

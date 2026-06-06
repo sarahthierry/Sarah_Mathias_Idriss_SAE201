@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StageConnect - Espace Professeur</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="CSS SAE 201 203.css">
+  <link rel="icon" type="image/png" href="logo.png">
+  <style>
+    .stat-card {
+      background: white;
+      border-radius: 20px;
+      padding: 30px;
+      text-align: center;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.04);
+      height: 100%;
+    }
+
+    .stat-number {
+      font-size: 2rem;
+      font-weight: 800;
+      color: #AEB89E;
+    }
+
+    .quick-btn {
+      min-height: 54px;
+    }
+
+    .alert-rounded {
+      border-radius: 16px;
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg py-3">
+    <div class="container">
+      <a class="navbar-brand" href="index (1).html">StageConnect</a>
+
+      <div class="ms-auto d-flex align-items-center gap-3">
+        <a href="index (1).html" class="nav-link">Accueil</a>
+        <a href="professeur_offres_stage.html" class="nav-link">Offres Prof.</a>
+        <a href="professeur_conventions_stage.html" class="nav-link">Conventions</a>
+        <a href="conseil_et_demande.html" class="nav-link">Conseils</a>
+        <a href="soutenances_stage.html" class="nav-link">Soutenance</a>
+        <a href="suivi_stage.html" class="nav-link">Suivi</a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="hero-section" id="page-professeur-espace">
+    <div class="container">
+      <div class="d-flex flex-column flex-md-row align-items-md-center justify-content-between gap-3 mb-4">
+        <div>
+          <span class="badge bg-primary px-3 py-2 mb-3">Espace Professeur</span>
+          <h1 class="hero-title mb-2">Tableau de bord</h1>
+          <p class="hero-text mb-0">Vue d’ensemble : offres à transmettre, conventions à valider, et suivi (à connecter via PHP).</p>
+        </div>
+      </div>
+
+      <div class="row g-4 mb-5">
+        <div class="col-md-4">
+          <div class="stat-card">
+            <div class="stat-number">0</div>
+            <div class="text-muted">Offres à transmettre</div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="stat-card">
+            <div class="stat-number">0</div>
+            <div class="text-muted">Conventions en attente</div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="stat-card">
+            <div class="stat-number">0</div>
+            <div class="text-muted">Étudiants suivis</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-lg-7">
+          <div class="form-card">
+            <h2 class="section-title mb-3">Raccourcis</h2>
+            <p class="text-muted mb-4">Boutons ci-dessous pour accéder aux fonctionnalités clés.</p>
+
+            <div class="row g-3">
+              <div class="col-md-6">
+                <a href="professeur_offres_stage.html" class="btn btn-primary w-100 quick-btn d-flex align-items-center justify-content-center">
+                  Offres & Transmissions
+                </a>
+              </div>
+              <div class="col-md-6">
+                <a href="professeur_conventions_stage.html" class="btn btn-outline-primary w-100 quick-btn d-flex align-items-center justify-content-center">
+                  Réception & Validation
+                </a>
+              </div>
+              <div class="col-md-6">
+                <a href="suivi_stage.html" class="btn btn-outline-primary w-100 quick-btn d-flex align-items-center justify-content-center">
+                  Suivi des stages
+                </a>
+              </div>
+              <div class="col-md-6">
+                <a href="conseil_et_demande.html" class="btn btn-outline-primary w-100 quick-btn d-flex align-items-center justify-content-center">
+                  Conseils & échanges
+                </a>
+              </div>
+            </div>
+
+            <hr class="my-4">
+
+            <div class="alert alert-info alert-rounded">
+              Cette page est un <b>dashboard</b> : relier à PHP ensuite pour afficher les compteurs depuis la base.
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-5">
+          <div class="form-card">
+            <h2 class="section-title mb-3">Activité récente</h2>
+            <p class="text-muted mb-4">Placeholder (à remplir via PHP) : transmissions faites et dernières conventions.</p>
+
+            <div class="d-flex flex-column gap-3">
+              <div class="p-3 bg-light rounded-3">
+                <div class="d-flex justify-content-between gap-3">
+                  <div>
+                    <div class="fw-semibold">Transmission d’une offre</div>
+                    <div class="text-muted small">Ex: Développeur Web Full Stack → Martin Lucas</div>
+                  </div>
+                  <div class="text-muted small">il y a 2 jours</div>
+                </div>
+              </div>
+
+              <div class="p-3 bg-light rounded-3">
+                <div class="d-flex justify-content-between gap-3">
+                  <div>
+                    <div class="fw-semibold">Convention reçue</div>
+                    <div class="text-muted small">Ex: Stage Data Science → Bernard Emma</div>
+                  </div>
+                  <div class="text-muted small">il y a 1 jour</div>
+                </div>
+              </div>
+
+              <div class="p-3 bg-light rounded-3">
+                <div class="d-flex justify-content-between gap-3">
+                  <div>
+                    <div class="fw-semibold">Validation</div>
+                    <div class="text-muted small">Ex: Convention validée (statut = validée)</div>
+                  </div>
+                  <div class="text-muted small">aujourd’hui</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-4 d-grid gap-2">
+              <a href="professeur_offres_stage.html" class="btn btn-primary">Gérer les offres</a>
+              <a href="professeur_conventions_stage.html" class="btn btn-outline-primary">Gérer les conventions</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <h4>StageConnect</h4>
+          <p>Plateforme de gestion des stages pour étudiants et entreprises.</p>
+        </div>
+        <div class="col-md-4">
+          <h5>Navigation</h5>
+          <a href="index (1).html" class="footer-link">Accueil</a>
+          <a href="professeur_espace.html" class="footer-link">Espace Prof.</a>
+          <a href="professeur_offres_stage.html" class="footer-link">Offres (Prof.)</a>
+          <a href="professeur_conventions_stage.html" class="footer-link">Conventions (Prof.)</a>
+        </div>
+        <div class="col-md-4">
+          <h5>Informations</h5>
+          <a href="#" class="footer-link">Mentions légales</a>
+          <a href="#" class="footer-link">Politique de confidentialité</a>
+          <a href="#" class="footer-link">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
+

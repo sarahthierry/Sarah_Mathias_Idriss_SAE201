@@ -1,0 +1,266 @@
+<?php
+// Page Professeur - Conventions de stage (convertie de professeur_conventions_stage.html)
+?>
+
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StageConnect - Espace Professeur (Conventions de stage)</title>
+  <link rel="icon" type="image/png" href="logo.png">
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="CSS SAE 201 203.css">
+
+  <style>
+    .table-actions-col { width: 260px; }
+    .alert-rounded { border-radius: 16px; }
+  </style>
+</head>
+
+<body>
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg py-3">
+    <div class="container">
+      <a class="navbar-brand" href="index.php">StageConnect</a>
+
+      <div class="ms-auto d-flex align-items-center gap-3">
+        <a href="professeur_espace.php" class="nav-link">Retour espace</a>
+        <a href="suivi_stage.php" class="nav-link">Suivi</a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="hero-section" id="page-prof-conventions">
+    <div class="container">
+      <div class="d-flex flex-column flex-md-row align-items-md-center justify-content-between gap-3 mb-4">
+        <div>
+          <span class="badge bg-primary px-3 py-2 mb-3">Espace Professeur</span>
+          <h1 class="hero-title mb-2">Réception & validation des conventions</h1>
+          <p class="hero-text mb-0">Suivi des conventions transmises par les étudiants (à connecter en PHP).</p>
+        </div>
+      </div>
+
+      <!-- FILTRES -->
+      <div class="search-box mb-5">
+        <form action="#" method="GET">
+          <div class="row g-3">
+            <div class="col-md-4">
+              <label class="form-label" for="filtre-etudiant">Étudiant</label>
+              <input id="filtre-etudiant" name="etudiant" type="text" class="form-control form-control-lg" placeholder="Nom / Prénom" />
+            </div>
+            <div class="col-md-4">
+              <label class="form-label" for="filtre-statut">Statut</label>
+              <select id="filtre-statut" name="statut" class="form-select form-control-lg">
+                <option value="" selected>Tous</option>
+                <option value="en_attente">En attente</option>
+                <option value="validee">Validée</option>
+                <option value="refusee">Refusée</option>
+              </select>
+            </div>
+            <div class="col-md-4">
+              <label class="form-label" for="filtre-entreprise">Entreprise</label>
+              <input id="filtre-entreprise" name="entreprise" type="text" class="form-control form-control-lg" placeholder="Nom de l’entreprise" />
+            </div>
+            <div class="col-md-2">
+              <label class="form-label d-block">&nbsp;</label>
+              <button type="submit" class="btn btn-primary w-100 btn-lg">Rechercher</button>
+            </div>
+            <div class="col-md-2">
+              <label class="form-label d-block">&nbsp;</label>
+              <a href="professeur_conventions_stage.php" class="btn btn-outline-primary w-100 btn-lg">Réinitialiser</a>
+            </div>
+          </div>
+        </form>
+
+        <div class="mt-4">
+          <div class="alert alert-info alert-rounded mb-0">
+            Les fichiers de convention peuvent être stockés (ex: chemin dans <b>stage.convention</b>), puis affichés en téléchargement ici.
+          </div>
+        </div>
+      </div>
+
+      <!-- TABLE CONVENTIONS -->
+      <div class="form-card">
+        <div class="d-flex align-items-center justify-content-between gap-3 flex-wrap">
+          <h2 class="section-title mb-0">Conventions reçues</h2>
+          <a href="professeur_offres_stage.php" class="btn btn-outline-primary">Retour Offres</a>
+        </div>
+
+        <p class="text-muted mt-3 mb-4">
+          Placeholder HTML. Via PHP, on affichera : étudiant + entreprise + stage + fichier de convention + statut + actions.
+        </p>
+
+        <div class="table-responsive">
+          <table class="table align-middle">
+            <thead>
+              <tr>
+                <th>Étudiant</th>
+                <th>Entreprise</th>
+                <th>Stage</th>
+                <th>Convention</th>
+                <th>Statut</th>
+                <th class="table-actions-col">Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <div class="fw-semibold">Martin Lucas</div>
+                  <div class="text-muted small">M1 Informatique</div>
+                </td>
+                <td>TechNova</td>
+                <td>
+                  <div class="fw-semibold">Développeur Web Full Stack</div>
+                  <div class="text-muted small">Période: 2026-02-01 → 2026-07-31</div>
+                </td>
+                <td>
+                  <a href="#" class="btn btn-outline-primary btn-sm">Télécharger</a>
+                  <div class="text-muted small mt-1">convention_stage.pdf</div>
+                </td>
+                <td><span class="badge bg-secondary">En attente</span></td>
+                <td>
+                  <div class="d-flex gap-2 flex-wrap">
+                    <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modalValider">Valider</button>
+                    <button type="button" class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modalRefuser">Refuser</button>
+                  </div>
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  <div class="fw-semibold">Bernard Emma</div>
+                  <div class="text-muted small">M2 Data Science</div>
+                </td>
+                <td>DataVision</td>
+                <td>
+                  <div class="fw-semibold">Analyste de Données</div>
+                  <div class="text-muted small">Période: 2026-03-01 → 2026-06-30</div>
+                </td>
+                <td>
+                  <a href="#" class="btn btn-outline-primary btn-sm">Télécharger</a>
+                  <div class="text-muted small mt-1">convention_bernard_emma.pdf</div>
+                </td>
+                <td><span class="badge bg-success">Validée</span></td>
+                <td>
+                  <div class="d-flex gap-2 flex-wrap">
+                    <a href="#" class="btn btn-outline-primary btn-sm">Détails</a>
+                  </div>
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  <div class="fw-semibold">Petit Nathan</div>
+                  <div class="text-muted small">Licence Réseaux</div>
+                </td>
+                <td>NetSecure</td>
+                <td>
+                  <div class="fw-semibold">Assistant Cybersécurité</div>
+                  <div class="text-muted small">Période: 2026-04-01 → 2026-07-31</div>
+                </td>
+                <td>
+                  <a href="#" class="btn btn-outline-primary btn-sm">Télécharger</a>
+                  <div class="text-muted small mt-1">convention_nathan_petit.pdf</div>
+                </td>
+                <td><span class="badge bg-danger">Refusée</span></td>
+                <td>
+                  <div class="d-flex gap-2 flex-wrap">
+                    <a href="#" class="btn btn-outline-primary btn-sm">Voir commentaires</a>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="alert alert-warning alert-rounded mt-4 mb-0">
+          Statuts de validation (ex: stockés dans une colonne dédiée ou via une table) : à implémenter côté PHP selon votre modèle.
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- MODAL VALIDER -->
+  <div class="modal fade" id="modalValider" tabindex="-1" aria-labelledby="modalValiderLabel" aria-hidden="true">
+    <div class="modal-dialog modal-md modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalValiderLabel">Valider la convention</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
+        </div>
+        <div class="modal-body">
+          <p class="text-muted mb-3">Placeholder. Ici vous confirmerez la validation et vous enregistrerez le statut via PHP.</p>
+          <form action="actions/valider_convention.php" method="POST">
+            <div class="mb-3">
+              <label class="form-label" for="valider-comment">Commentaire (optionnel)</label>
+              <textarea id="valider-comment" name="commentaire" class="form-control" rows="4" placeholder="Ex: OK, merci."></textarea>
+            </div>
+            <button type="button" class="btn btn-outline-primary" data-bs-dismiss="modal">Annuler</button>
+            <button type="submit" class="btn btn-primary">Confirmer</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL REFUSER -->
+  <div class="modal fade" id="modalRefuser" tabindex="-1" aria-labelledby="modalRefuserLabel" aria-hidden="true">
+    <div class="modal-dialog modal-md modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalRefuserLabel">Refuser la convention</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
+        </div>
+        <div class="modal-body">
+          <p class="text-muted mb-3">Placeholder. Ici vous refuserez et enverrez un commentaire à l’étudiant via PHP.</p>
+<form action="actions/refuser_convention.php" method="POST">
+            <div class="mb-3">
+              <label class="form-label" for="refuser-comment">Motif / commentaire</label>
+              <textarea id="refuser-comment" name="commentaire" class="form-control" rows="4" placeholder="Ex: Signature manquante sur la page 2."></textarea>
+            </div>
+            <button type="button" class="btn btn-outline-primary" data-bs-dismiss="modal">Annuler</button>
+            <button type="submit" class="btn btn-primary">Refuser</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <h4>StageConnect</h4>
+          <p>Plateforme de gestion des stages pour étudiants et entreprises.</p>
+        </div>
+        <div class="col-md-4">
+          <h5>Navigation</h5>
+          <a href="index.php" class="footer-link">Accueil</a>
+          <a href="professeur_offres_stage.php" class="footer-link">Offres (Prof.)</a>
+          <a href="professeur_conventions_stage.php" class="footer-link">Conventions (Prof.)</a>
+        </div>
+        <div class="col-md-4">
+          <h5>Informations</h5>
+          <a href="#" class="footer-link">Mentions légales</a>
+          <a href="#" class="footer-link">Politique de confidentialité</a>
+          <a href="#" class="footer-link">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
+

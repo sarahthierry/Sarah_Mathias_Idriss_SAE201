@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StageConnect - Offres de stage</title>
+    <link rel="icon" type="image/png" href="logo.png">
+
+```
+<!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+
+<!-- Custom CSS -->
+<link rel="stylesheet" href="CSS SAE 201 203.css">
+```
+
+</head>
+
+<body>
+
+```
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg py-3">
+    <div class="container">
+
+        <a class="navbar-brand" href="index.php">
+            StageConnect
+        </a>
+
+        <div class="ms-auto d-flex align-items-center gap-3">
+
+            <a href="index.php" class="nav-link" id="nav-accueil">
+                Accueil
+            </a>
+
+            <a href="offre_de_stage.php" class="nav-link" id="nav-offres">
+                Offres
+            </a>
+
+            <a href="mes_candidatures.php" class="nav-link" id="nav-mes-candidatures">
+                Mes candidatures
+            </a>
+
+            <a href="suivi_stage.php" class="nav-link" id="nav-suivi">
+                Suivi
+            </a>
+
+            <a href="conseil_et_demande.php" class="nav-link" id="nav-conseils">
+                Conseils
+            </a>
+
+            <a href="soutenances_stage.php" class="nav-link" id="nav-soutenances">
+                Soutenances
+            </a>
+
+        </div>
+
+    </div>
+</nav>
+
+<!-- PAGE OFFRES -->
+<section class="hero-section" id="page-offres">
+
+    <div class="container">
+
+        <div class="d-flex flex-column flex-md-row align-items-md-center justify-content-between gap-3 mb-4">
+
+            <div>
+
+                <span class="badge bg-primary px-3 py-2 mb-3">
+                    Offres de stage
+                </span>
+
+                <h1 class="hero-title mb-2">
+                    Trouvez et postulez
+                </h1>
+
+                <p class="hero-text mb-0">
+                    Consultez les offres disponibles et envoyez votre candidature.
+                </p>
+
+            </div>
+
+        </div>
+
+        <!-- RECHERCHE -->
+
+        <div class="search-box mb-5">
+
+            <form action="offre_de_stage.php" method="GET">
+
+                <div class="row g-3">
+
+                    <div class="col-md-4">
+
+                        <label class="form-label" for="filtre-metier">
+                            Métier
+                        </label>
+
+                        <input
+                            id="filtre-metier"
+                            type="text"
+                            class="form-control form-control-lg"
+                            placeholder="Ex: Développeur"
+                            name="metier">
+
+                    </div>
+
+                    <div class="col-md-4">
+
+                        <label class="form-label" for="filtre-ville">
+                            Ville
+                        </label>
+
+                        <input
+                            id="filtre-ville"
+                            type="text"
+                            class="form-control form-control-lg"
+                            placeholder="Ex: Paris"
+                            name="ville">
+
+                    </div>
+
+                    <div class="col-md-4">
+
+                        <label class="form-label" for="filtre-promotion">
+                            Promotion
+                        </label>
+
+                        <input
+                            id="filtre-promotion"
+                            type="text"
+                            class="form-control form-control-lg"
+                            placeholder="Ex: BUT3"
+                            name="promotion">
+
+                    </div>
+
+                    <div class="col-md-3">
+
+                        <button
+                            type="submit"
+                            class="btn btn-primary w-100 btn-lg mt-4">
+
+                            Rechercher
+
+                        </button>
+
+                    </div>
+
+                    <div class="col-md-3">
+
+                        <a
+                            href="offre_de_stage.php"
+                            class="btn btn-outline-primary w-100 btn-lg mt-4">
+
+                            Voir toutes les offres
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </form>
+
+        </div>
+
+        <!-- MESSAGE -->
+
+        <div class="alert alert-info text-center">
+
+            Après votre recherche, les résultats seront affichés
+            automatiquement dans la page <strong>offre_de_stage.php</strong>.
+
+        </div>
+
+        <!-- APERÇU -->
+
+        <div class="mt-2">
+
+            <h2 class="section-title mb-4">
+                Rechercher une offre
+            </h2>
+
+            <div class="row g-4">
+
+                <div class="col-md-4">
+
+                    <div class="offer-card">
+
+                        <h4>Développeur Web</h4>
+
+                        <p class="offer-location">
+                            Paris • 6 mois
+                        </p>
+
+                        <p class="mb-3">
+                            Exemple d'offre de stage affichée depuis la base de données.
+                        </p>
+
+                        <div class="d-flex flex-column gap-2">
+
+                            <a
+                                href="offre_de_stage.php"
+                                class="btn btn-outline-primary">
+
+                                Voir les offres
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="col-md-4">
+
+                    <div class="offer-card">
+
+                        <h4>Analyste de Données</h4>
+
+                        <p class="offer-location">
+                            Lyon • 4 mois
+                        </p>
+
+                        <p class="mb-3">
+                            Les résultats réels seront chargés depuis offre_stage.
+                        </p>
+
+                        <div class="d-flex flex-column gap-2">
+
+                            <a
+                                href="offre_de_stage.php"
+                                class="btn btn-outline-primary">
+
+                                Voir les offres
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="col-md-4">
+
+                    <div class="offer-card">
+
+                        <h4>Cybersécurité</h4>
+
+                        <p class="offer-location">
+                            Nice • 4 mois
+                        </p>
+
+                        <p class="mb-3">
+                            Cliquez pour accéder aux offres disponibles.
+                        </p>
+
+                        <div class="d-flex flex-column gap-2">
+
+                            <a
+                                href="offre_de_stage.php"
+                                class="btn btn-outline-primary">
+
+                                Voir les offres
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-md-4">
+
+                <h4>StageConnect</h4>
+
+                <p>
+                    Plateforme de gestion des stages
+                    pour étudiants et entreprises.
+                </p>
+
+            </div>
+
+            <div class="col-md-4">
+
+                <h5>Navigation</h5>
+
+                <a href="index.php" class="footer-link">
+                    Accueil
+                </a>
+
+                <a href="offre_de_stage.php" class="footer-link">
+                    Offres
+                </a>
+
+                <a href="mes_candidatures.php" class="footer-link">
+                    Mes candidatures
+                </a>
+
+                <a href="suivi_stage.php" class="footer-link">
+                    Suivi
+                </a>
+
+            </div>
+
+            <div class="col-md-4">
+
+                <h5>Informations</h5>
+
+                <a href="#" class="footer-link">
+                    Mentions légales
+                </a>
+
+                <a href="#" class="footer-link">
+                    Politique de confidentialité
+                </a>
+
+                <a href="#" class="footer-link">
+                    Contact
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+
+<!-- Bootstrap JS -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+```
+
+</body>
+
+</html>
+
